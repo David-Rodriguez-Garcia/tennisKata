@@ -1,10 +1,11 @@
+const { playSet } = require("./utils/playSet");
+const { rl } = require('./utils/rl');
+
 (async function () {
     //libraries
-    const { playSet} = require("./utils/playSet");
-    const { rl } = require('./utils/rl');
     //the players points - [sets won, games won, gamePoints]
-    let p1 = [0, 0, 0];
-    let p2 = [0, 0, 0];
+    const p1 = [0, 0, 0];
+    const p2 = [0, 0, 0];
     //while neither one of them has reached 2 sets
     while (p1[0] != 2 && p2[0] != 2) {
         console.log(`SET SCORE: ${p1[0]} - ${p2[0]}`)

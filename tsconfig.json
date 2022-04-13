@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "target": "ES2016",
+    "allowJs": false,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "strict": true
+  },
+  "include": ["./utils/**/*", "./main.ts"]
+}

@@ -1,8 +1,9 @@
-async function playGame(p1, p2, playNormalGame, playTieBreak) {
+const { playNormalGame } = require("./playNormalGame");
+const { playTieBreak } = require("./playTieBreak");
+
+async function playGame(p1: number[], p2: number[]): Promise<void> {
     console.log(`GAME SCORE: ${p1[1]} - ${p2[1]}`);
     p1[2] = p2[2] = 0; //reset game points
-
-
 
     //if it's not a tiebreak game
     if (p1[1] != 6 || p2[1] != 6) {
@@ -16,4 +17,5 @@ async function playGame(p1, p2, playNormalGame, playTieBreak) {
         p2[1]++;
     }
 }
-exports.playGame = playGame;
+
+export { playGame };

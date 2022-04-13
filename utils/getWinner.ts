@@ -1,8 +1,7 @@
 const { getWinnerPlayer } = require("./getWinnerPlayer");
 
-
-async function getWinner(p1, p2) {
-    let winner;
+async function getWinner(p1: number[], p2: number[]): Promise<void> {
+    let winner: string;
     winner = await getWinnerPlayer();
     while (winner != '1' && winner != '2') {
         console.log('Error - Type 1 or 2');
@@ -14,4 +13,5 @@ async function getWinner(p1, p2) {
         p2[2]++;
     }
 }
-exports.getWinner = getWinner;
+
+export { getWinner };

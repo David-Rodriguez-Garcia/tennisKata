@@ -5,4 +5,4 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-exports.rl = rl;
+export { rl };

@@ -1,6 +1,6 @@
 const { results } = require("./utils");
 
-function displayResults(p1, p2) {
+function displayResults(p1: number[], p2: number[]): void {
     //if both are still under 4 points display them
     if (p1[2] < 4 && p2[2] < 4 && (p1[2] != 3 || p2[2] != 3)) {
         if (p1[2] == p2[2]) { //adding the -all if they both have the same points
@@ -20,4 +20,5 @@ function displayResults(p1, p2) {
         }
     }
 }
-exports.displayResults = displayResults;
+
+export { displayResults };
